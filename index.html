@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>第３回英単【例文】(日本語➡英語)</title>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>	
+	
+	<div class="title-top">
+		<h1>第３回英単語テスト</h1>	
 
+	<div id="card">
+		<div id="card-front"></div>
+		<div id="card-back"></div>
+	</div>
+	<div id="btn">NEXT</div>
+	<script>
+		(function() {
+			'use strict';
+
+			var words = [
+   {'ja': 'Can you guess what happened at that time?', 'en': 'そのとき何が起こったかを推測することができますか。'},
+   {'ja': 'The hotel prepared a special room for us.', 'en': 'そのホテルは私たちのために特別室を準備してくれた。'},
+   {'ja': 'He has developed his business in China.', 'en': '彼は中国で事業を発展させてきた。'},
+   {'ja': 'They had a meeting to solve the problem.', 'en': '彼らはその問題を解決するために会議を開いた。'},
+   {'ja': 'My friends encouraged me to try again.', 'en': '友だちはもう一度やってみるように私を励ましてくれた。'},
+   {'ja': 'I never expected to see you here in India.', 'en': '私はここインドであなたに会うことを一度も予想しなかった。'},
+   {'ja': 'How do we deal with this difficult problem?', 'en': '私たちはどのようにこの難しい問題を処理すればよいのか。'},
+   {'ja': 'Cathy measured the size of the window for its curtains.', 'en': 'キャシーはカーテンのために窓のサイズを測った。'},
+   {'ja': 'They demanded more information about the accident.', 'en': '彼らはその事故についてさらなる情報を要求した。'},
+   {'ja': 'These new books contain important information.', 'en': 'これらの新しい本は重要な情報を含んでいる。'},
+   {'ja': 'There are various ways to answer the question.', 'en': 'その質問に答えるにはさまざまな方法がある。'},
+   {'ja': 'Education is a major political issue in that country.', 'en': 'その国では教育は大きな政治問題である。'},
+   {'ja': 'Scientific research will show us new facts about space.', 'en': '科学研究により宇宙に関する新事実が私たちに明らかになるだろう。'},
+   {'ja': 'You have to go to medical school to become a doctor.', 'en': '医者になるためには医学部［医科大学］へ行かなくてはならない。'},
+   {'ja': 'His books are known across the whole world.', 'en': '彼の本は全世界で知られている。'},
+   {'ja': 'My computer has a serious problem with its hard disk.', 'en': '私のコンピュータはハードディスクに深刻な問題がある。'},
+   {'ja': 'Mary didn´t say a single word when she saw him.', 'en': 'メアリーは彼に会ったとき，たった1つの言葉も［一言も]言わなかった。'},
+   {'ja': 'What is the general opinion on that matter?', 'en': 'その件に関する一般的な意見はどういうものですか。'},
+   {'ja': 'The total number of students is about 200.', 'en': '生徒の総数は約200人です。'},
+   {'ja': 'Good sleep is necessary for our health.', 'en': '快眠は私たちの健康のために必要である。'},
+   {'ja': 'The artist likes to use natural materials like stone or wood.', 'en': 'その芸術家は石や木のような自然の材料を使うのが好きだ。'},
+   {'ja': 'There is a lack of communication between you and me.', 'en': 'あなたと私の間にはコミュニケーション不足がある。'},
+   {'ja': 'We have to make a decision by tomorrow morning.', 'en': '私たちは明日の朝までに決定を下さなければならない。'},
+   {'ja': 'Scientists are looking for new energy sources.', 'en': '科学者たちは新しいエネルギー源を探している。'},
+   {'ja': 'There is no risk to your life during this tour.', 'en': 'この旅行中あなたの命の危険はまったくない。'},
+   {'ja': 'I received the bill for my new fridge today.', 'en': '私は今日，新しい冷蔵庫の請求書を受け取った。'},
+   {'ja': 'His father is a professor of Japanese history.', 'en': '彼の父は日本史の教授である。'},
+   {'ja': 'Children should have a healthy diet.', 'en': '子どもたちは健康的な食事をとるべきだ。'},
+   {'ja': 'This store sells many wines of high quality.', 'en': 'この店は質の高いワインをたくさん売っている。'},
+   {'ja': 'They are collecting data on a new kind of animal.', 'en': '彼らは新種の動物に関するデータを集めている。'},
+   {'ja': 'She usually takes notes on the most important points.', 'en': '彼女はたいてい最も大事な点のメモをとる。'},
+   {'ja': 'We have to find a way to meet the challenge.', 'en': '私たちはその難題に立ち向かう方法を見つけなければならない。'},
+   {'ja': 'We don´t understand all of the brain functions.', 'en': '私たちはすべての脳機能を理解しているわけではない。'},
+   {'ja': 'She wrote some articles on[about] soccer in the magazine.', 'en': '彼女はその雑誌でサッカーに関する記事をいくつか書いた。'},
+   {'ja': 'My mother made me a cake in the shape of a star.', 'en': '母は私に星の形をしたケーキを作ってくれた。'},
+   {'ja': 'I placed a chair in the middle.', 'en': '私は中央にいすを置いた。'},
+   {'ja': 'We are doing our best to reach our goal.', 'en': '私たちは目標に達するために最善をつくしている。'},
+   {'ja': 'Meg wants to improve the image of her shop.', 'en': 'メグは自分の店をイメージアップしたいと思っている。'},
+   {'ja': 'The cost of construction will come to a large figure.', 'en': '建設費用は大きな数値になるだろう。'},
+   {'ja': 'The technology has developed in the last decade.', 'en': 'その技術は最近の10年間で発展した。'},
+   {'ja': 'It is not believed that life exists on Mars.', 'en': '火星に生命は存在すると信じられていない。'},
+   {'ja': 'The teacher reduced the number of questions from ten to five.', 'en': '先生は問題数を10問から5問に減らした。'},
+   {'ja': 'The man finally gained power in that country.', 'en': 'その男はついにその国で権力を得た。'},
+   {'ja': 'The new project requires time and money.', 'en': 'その新しい計画は時間と金を必要とする。'},
+   {'ja': 'They proved (that) their theory was right.', 'en': '彼らは自分たちの学説が正しいことを証明した。'},
+   {'ja': 'The heavy rain prevented me from going out.', 'en': '大雨は私が外出するのを妨げた［大雨で私は外出できなかった］。'},
+   {'ja': 'They carefully compared my work with[to] hers.', 'en': '彼らは注意深く私の作品を彼女のものと比較した。'},
+   {'ja': 'We can adapt the technology for our new product.', 'en': '私たちはその技術を新製品に適合させることができる。'},
+   {'ja': 'The government conducted a survey of public opinion.', 'en': '政府は世論調査を行った。'},
+   {'ja': 'Both my sister and I prefer books to movies.', 'en': '妹も私も映画より本が好きだ。'},
+   {'ja': 'He wants to be successful in his business.', 'en': '彼は事業に成功したいと思っている。'},
+   {'ja': 'The accident was due to a mistake in the design.', 'en': 'その事故は設計ミスが原因であった。'},
+   {'ja': 'This discount ticket is available for shopping in that store.', 'en': 'この割引券はその店での買い物に利用できる。'},
+   {'ja': 'In most Western countries, Christmas is a special day.', 'en': 'たいていの西洋諸国では，クリスマスは特別な日である。'},
+   {'ja': 'In my personal opinion, he should be the new leader.', 'en': '私個人の意見では，彼が新しいリーダーになるべきだ。'},
+   {'ja': 'She has been studying the culture of ancient Egypt.', 'en': '彼女は古代エジプトの文化を研究している。'},
+   {'ja': 'Mary is not used to living in a large city.', 'en': 'メアリーは大都会に住むことに慣れていない。'},
+   {'ja': 'He lives in Italy, but his native country is Spain.', 'en': '彼はイタリアに住んでいるが，母国はスペインだ。'},
+   {'ja': 'Playing with my friends is the most important thing in my daily life.', 'en': '友だちとの遊びは私の日常生活でいちばん大切だ。'},
+   {'ja': 'Listen to the questions and circle the correct answers.', 'en': '質問を聞いて正しい答えを丸で囲みなさい。'}
+			];
+
+
+			var card = document.getElementById('card');
+			var cardFront = document.getElementById('card-front');
+			var cardBack = document.getElementById('card-back');
+			var btn = document.getElementById('btn');
+			card.addEventListener('click', function() {
+				flip();
+			});
+			btn.addEventListener('click', function() {
+				next();
+			});
+
+			function next() {
+				if (card.className === 'open') {
+					card.addEventListener('transitionend', setCard);
+					flip();
+				} else {
+					setCard();
+				}
+			}
+				function setCard() {
+					var num = Math.floor(Math.random() * words.length);
+					cardFront.innerHTML = words[num]['ja'];
+					cardBack.innerHTML = words[num]['en'];
+					card.removeEventListener('transitionend', setCard);
+			}
+
+			setCard();
+
+			window.addEventListener('keyup', function(e) {
+				// console.log(e.keyCode);
+				if (e.keyCode === 70) {
+					flip();
+				} else if (e.keyCode === 78) {
+					next();
+				}
+			});
+
+			function flip() {
+				card.className = card.className === '' ? 'open' : '';
+			}
+		})();
+	</script>
+</body>
+</html>
